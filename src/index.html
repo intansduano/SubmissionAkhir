@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Apps</title>
+
+</head>
+
+<body>
+    <header>
+        <text-navbar></text-navbar>
+    </header>
+
+    <div class="wrapper">
+        <div class="container bg-white shadow" id="add-todo">
+
+            <search-section></search-section>
+            <h2 class="container-header text-center">Tambahkan Data Kehadiran</h2>
+            <form class="form" action="#" id="form">
+                <div class="form-group form-title">
+                    <label for="title">Nama Lengkap Mahasiswa</label>
+                    <input type="text" id="title" name="title" placeholder="Masukkan nama lengkap" maxlength="40" required>
+                </div>
+                <div class="form-group form-title">
+                    <label for="title">Nama Mata Kuliah</label>
+                    <input type="text" id="author" name="title" placeholder="Masukkan mata kuliah" maxlength="30" required>
+                </div>
+                <div class="form-group form-title">
+                    <label for="date">Tanggal Kehadiran</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <input type="submit" value="Submit" name="Submit" class="btn-submit">
+            </form>
+        </div>
+        <div class="container">
+            <h2 class="container-header">Mengisi Daftar Hadir</h2>
+            <div class="list-item" id="todos">
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="container-header">Hadir</h2>
+            <div class="list-item" id="completed-todos">
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
