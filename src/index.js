@@ -5,6 +5,8 @@ import './component/text-navbar.js';
 const todos = [];
 const RENDER_EVENT = 'render-todo';
 
+const baseUrl = 'https://www.themealdb.com/api.php';
+
 document.addEventListener('DOMContentLoaded', function() {
     const submitForm = document.getElementById('form');
     submitForm.addEventListener('submit', function(event) {
@@ -86,7 +88,7 @@ function makeTodo(todoObject) {
         undoButton.addEventListener('click', function() {
             undotitleFromCompleted(todoObject.id);
 
-            alert("Buku akan dibaca kembali");
+            alert("Data dikembalikan");
         });
 
         const trashButton = document.createElement('button');
@@ -95,7 +97,7 @@ function makeTodo(todoObject) {
         trashButton.addEventListener('click', function() {
             removetitleFromCompleted(todoObject.id);
 
-            alert("Buku akan dihapus");
+            alert("Data sudah dihapus");
         });
 
         container.append(undoButton, trashButton);
@@ -106,7 +108,7 @@ function makeTodo(todoObject) {
         checkButton.addEventListener('click', function() {
             addtitleToCompleted(todoObject.id);
 
-            alert("Buku selesai dibaca");
+            alert("Persediaan Habis");
         });
 
         const trashButton = document.createElement('button');
@@ -115,7 +117,7 @@ function makeTodo(todoObject) {
         trashButton.addEventListener('click', function() {
             removetitleFromCompleted(todoObject.id);
 
-            alert("Buku akan dihapus");
+            alert("Data akan dihapus");
         });
 
         container.append(checkButton, trashButton);

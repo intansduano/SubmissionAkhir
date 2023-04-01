@@ -1,6 +1,21 @@
 class SearchSection extends HTMLElement {
+    constructor() {
+        super();
+        this.shadowDOM = this.attachShadow({ mode: 'open' });
+    }
+
     connectedCallback() {
         this.render();
+    }
+
+    set clickEvent(event) {
+        this._clickEvent = event;
+        this.render();
+    }
+
+
+    get value() {
+        return this.shadowDOM.querySelector('#searchElement').value;
     }
 
     render() {
@@ -12,6 +27,8 @@ class SearchSection extends HTMLElement {
                 </div>
                 <center><input type="submit" id="search-button" value="Cari" name="Submit" class="btn-submit">
             `;
+
+        //this.shadowDOM.querySelector('#searchButtonElement').addEventListener('click', this._clickEvent);
     }
 }
 

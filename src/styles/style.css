@@ -104,10 +104,7 @@ search-section {
     box-shadow: 10px 10px 10px 10px rgba(154, 160, 185, .05), 10px 15px 40px rgba(166, 173, 201, .2);
 }
 
-input[type=text],
-input[type=number],
-input[type=search],
-input[type=date] {
+.form-group input {
     font-family: Raleway, sans-serif;
     background: #F5F1FF;
     border: 2px solid #ffa012;
@@ -150,6 +147,13 @@ input[type=date],
 
 .form-title {
     margin: auto 0;
+}
+
+student-list {
+    display: block;
+    margin-top: 32px;
+    width: 100%;
+    padding: 16px;
 }
 
 .check-button {

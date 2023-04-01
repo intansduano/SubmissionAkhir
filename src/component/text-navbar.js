@@ -4,7 +4,7 @@ class TextNavbar extends HTMLElement {
     }
 
     render() {
-        this.innerHTML = `<h1>Daftar Hadir Mahasiswa</h1>`;
+        this.innerHTML = `<h1>Data Ketersediaan <i>Meals<i></h1>`;
     }
 }
 
