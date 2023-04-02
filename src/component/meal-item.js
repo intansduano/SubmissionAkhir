@@ -8,6 +8,7 @@ class MealItem extends HTMLElement {
 
     set meal(meal) {
         this._meal = meal;
+        this._category = meal.category;
         this.render();
     }
 
