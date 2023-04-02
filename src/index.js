@@ -1,11 +1,14 @@
 import './styles/style.css';
 import './component/search-section.js';
 import './component/text-navbar.js';
+import axios from 'axios';
+import DataSource from './data/data-source.js';
+
 
 const todos = [];
 const RENDER_EVENT = 'render-todo';
 
-const baseUrl = 'https://www.themealdb.com/api.php';
+axios.defaults.baseUrl = 'https://www.themealdb.com/api.php';
 
 document.addEventListener('DOMContentLoaded', function() {
     const submitForm = document.getElementById('form');
@@ -223,9 +226,9 @@ document.getElementById("search-button").addEventListener('click', () => {
     data.forEach(item => {
         let itemElement = document.getElementById(`todo-${item.id}`)
         if (item.title.includes(searchInput)) {
-            itemElement.style.display = "block"
-        } else {
             itemElement.style.display = "none"
+        } else {
+            itemElement.style.display = "block"
         }
     })
 });

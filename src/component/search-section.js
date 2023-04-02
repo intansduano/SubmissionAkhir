@@ -22,6 +22,10 @@ class SearchSection extends HTMLElement {
         this.shadowDOM.innerHTML =
             `
             <style> 
+        body{
+            font-family: 'Quicksand', sans-serif;
+    }
+
         .form-container {
     display: flex;
     padding: 16px;
@@ -94,7 +98,7 @@ input[type=date],
                 <center><input type="submit" id="search-button" value="Cari" name="Submit" class="btn-submit">
             `;
 
-        //this.shadowDOM.querySelector('#searchButtonElement').addEventListener('click', this._clickEvent);
+        this.shadowDOM.querySelector('#searchButtonElement').addEventListener('click', this._clickEvent);
     }
 }
 
